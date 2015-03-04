@@ -19,3 +19,10 @@
 - (void)calendarDidLoadNextPage;
 
 @end
+
+@protocol JTCalendarViewDelegate <NSObject>
+
+@optional
+- (BOOL)dayView:(UIView *)view;
+
+@end
