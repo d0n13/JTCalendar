@@ -61,4 +61,10 @@
     return haveEvent;
 }
 
+-(long) hasSteps:(NSDate *)date
+{
+    NSString *key = [dateFormatter stringFromDate:date];
+    
+}
+
 @end

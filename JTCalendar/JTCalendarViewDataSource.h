@@ -20,9 +20,9 @@
 
 @end
 
-@protocol JTCalendarViewDelegate <NSObject>
+@protocol JTCalendarDayDelegate <NSObject>
 
 @optional
-- (BOOL)dayView:(UIView *)view;
+-(void)frameForDay:(CGRect)frame;
 
 @end

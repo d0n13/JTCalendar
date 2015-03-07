@@ -19,6 +19,9 @@
     
     int cacheIsToday;
     NSString *cacheCurrentDateText;
+    
+    // Custom
+    UIView *customView;
 }
 @end
 
@@ -105,7 +108,7 @@ static NSString *const kJTCalendarDaySelected = @"kJTCalendarDaySelected";
 {
     textLabel.frame = CGRectMake(0, 0, self.frame.size.width, self.frame.size.height);
     backgroundView.frame = CGRectMake(0, 0, self.frame.size.width, self.frame.size.height);
-
+    
 
     CGFloat sizeCircle = MIN(self.frame.size.width, self.frame.size.height);
     CGFloat sizeDot = sizeCircle;
@@ -244,6 +247,8 @@ static NSString *const kJTCalendarDaySelected = @"kJTCalendarDaySelected";
         circleView.layer.opacity = opacity;
         circleView.transform = tr;
     }
+    
+    [self.calendarManager.dayDelegate frameForDay:backgroundView.frame];
 }
 
 - (void)setIsOtherMonth:(BOOL)isOtherMonth
